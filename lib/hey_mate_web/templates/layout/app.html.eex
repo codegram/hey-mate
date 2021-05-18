@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="favicon.svg">
+    <title>HeyMate!</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <%= link to: Routes.home_path(@conn, :index), class: "logo" do %>
+          <img class="message" src="<%= Routes.static_path(@conn, "/images/logo.svg")%>" alt="HeyMate logo"/>
+          <span class="logo-reward-emoji">🧉</span>
+        <% end %>
+        <nav class="navigation">
+          <ul class="navigation__items">
+            <li id="how-it-works-nav-item">
+              <%= link "How it Works", to: "/#how-it-works" %>
+            </li>
+            <%= if @current_user do %>
+              <%= if HeyMate.Auth.is_admin?(@current_user) do %>
+                <li><%= link "Settings", to: Routes.settings_path(@conn, :index) %></li>
+              <% end %>
+              <li><%= link "Sign out", to: Routes.pow_session_path(@conn, :delete), method: :delete, role: "button", class: "button" %></li>
+            <% else %>
+              <li><%= link "Sign in", to: Routes.pow_assent_authorization_path(@conn, :new, :slack), role: "button", class: "button" %></li>
+            <% end %>
+          </ul>
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= @inner_content %>
+    </main>
+  </body>
+  <footer>
+    <div class="footer-wrapper container">
+      <p>Made with 🧉 by <a href="https://www.codegram.com" target="_blank">Codegram</a></p>
+      <a href="https://github.com/codegram/hey-mate" target="_blank">Manifesto</a>
+    </div>
+  </footer>
+</html>

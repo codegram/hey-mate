@@ -1,0 +1,177 @@
+.container {
+  margin: 0 auto;
+  max-width: 864px;
+  padding: 0;
+  position: relative;
+}
+.grey {
+  background: #f9f9f9;
+}
+.outro {
+  margin-top: 120px;
+  background-image: url(../static/images/blob.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.outro > h1 {
+  color: #4262ff;
+}
+.add-to-slack-button {
+  margin-top: 40px;
+}
+.action-button {
+  background-color: #4262ff;
+  margin: 48px auto 120px;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  padding: 20px 32px 24px 32px;
+}
+.action-button:hover {
+  background-color: #3855e3;
+  cursor: pointer;
+}
+.action-button:active {
+  background-color: #3855e3d3;
+  cursor: pointer;
+}
+.hero {
+  background: transparent;
+  text-align: center;
+}
+.hero-wrapper {
+  background: url(../static/images/top-wave.svg) no-repeat bottom;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.messages {
+  padding-bottom: 70px;
+}
+.messages > :first-child {
+  position: relative;
+  left: -100px;
+}
+.messages > :nth-child(2) {
+  position: relative;
+  left: 100px;
+}
+.message {
+  max-width: 507px;
+  margin: 0;
+}
+.slides {
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  background: url(../static/images/bottom-wave.svg) no-repeat top;
+  padding-top: 140px;
+}
+.slide {
+  background-color: #ffd02f;
+  height: 190px;
+  width: 20%;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0px 8px 32px -8px rgba(196, 158, 29, 0.32);
+}
+.slide-element {
+  width: 200px;
+  position: relative;
+  top: -133px;
+}
+.slide-text {
+  margin: auto;
+}
+.slide p {
+  margin-top: 13px;
+  font-size: 15px;
+  line-height: 22px;
+}
+.icon {
+  width: 24px;
+  margin-right: 5px;
+}
+.repo-button {
+  background-color: #050038;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.repo-button:hover {
+  background-color: #0c065f;
+}
+.repo-button:active {
+  background-color: #050038d3;
+}
+
+@media only screen and (max-width: 1000px) {
+  /* Slides in 2 column grid */
+  .slides {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 150px 20px;
+    grid-template-areas:
+      ". slide-step-1 . slide-step-2 ."
+      ". slide-step-3 . slide-step-4 .";
+  }
+  .slide {
+    height: 190px;
+    width: 100%;
+  }
+  .slide-text {
+    margin: 5px;
+  }
+  #slide-step-1 {
+    grid-area: slide-step-1;
+  }
+  #slide-step-2 {
+    grid-area: slide-step-2;
+  }
+  #slide-step-3 {
+    grid-area: slide-step-3;
+  }
+  #slide-step-4 {
+    grid-area: slide-step-4;
+  }
+  .messages > :first-child {
+    position: relative;
+    left: -8%;
+  }
+  .messages > :nth-child(2) {
+    position: relative;
+    left: 8%;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  /* Remove horizontal offest from messages */
+  .messages > :first-child {
+    position: relative;
+    left: 0px;
+  }
+  .messages > :nth-child(2) {
+    position: relative;
+    left: 0px;
+  }
+
+  .slides {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: auto;
+    align-items: center;
+  }
+  .slide {
+    width: 75%;
+  }
+  .slide-text {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
