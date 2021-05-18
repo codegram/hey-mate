@@ -1,0 +1,13 @@
+<h1>Settings</h1>
+<nav>
+  <%= link "Go back", to: Routes.admin_path(@conn, :index) %>
+</nav>
+<%= form_for @settings, Routes.settings_path(@conn, :update), fn f -> %>
+<label>
+  Reward emoji name: <%= text_input f, :reward_emoji_name %>
+</label>
+<label>
+  Reward limit per day: <%= number_input f, :reward_limit_per_day %>
+</label>
+<%= submit "Submit" %>
+<% end %>

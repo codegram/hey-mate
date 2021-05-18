@@ -1,0 +1,51 @@
+<div class="main">
+  <div class="hero-wrapper">
+    <div class="hero container">
+      <img src="<%= Routes.static_path(@conn, "/images/hero-image.svg")%>", alt="Drawing of two hands giving a present; a man catching colored shapes with a fishing net; a kid playing with colorful baloons"/>
+      <h1>Recognize and celebrate your team's work!</h1>
+      <p>Because we all like to spread some love and be valued. Strengthen your team relationships!</p>
+      <a href="#" role="button" class="button action-button">Start the team building</a>
+    </div>
+  </div>
+  <div id="how-it-works">
+    <div class="grey messages-wrapper">
+      <h2>Easy to use and to add to your Slack channels</h2>
+      <p>Free forever, no credit card required 😉</p>
+      <div class="container messages grey">
+        <img class="message" src="<%= Routes.static_path(@conn, "/images/message1.svg")%>" alt="Message from John King saying: 'Wow @Sarah James! I really loves your design proposal, awesome! A great (avocado emoji) for you (wink emoji)'"/>
+        <img class="message" src="<%= Routes.static_path(@conn, "/images/message2.svg")%>" alt="Message from Jerome Ricard saying: 'Hell yeah (horn emoji) Love it (heart-eyes emoji)! (avocado emoji) for all the great team we have @here'"/>
+        <img class="message" src="<%= Routes.static_path(@conn, "/images/message3.svg")%>" alt="Message from Sarah Jame saying: 'Thank you guys! (hug emoji) We’re pretty happy with the final result. Another one for @Jerome Ricard and his hard work managing (avocado emoji)'. The message has an avocado emoji reaction."/>
+      </div>
+    </div>
+    <div class="slides">
+      <div class="slide" id="slide-step-1">
+        <img class="slide-element slide-image" src="<%= Routes.static_path(@conn, "/images/box.svg")%>" alt="A package landing with a parachute"/>
+        <h3 class="slide-element slide-text">Add it</h3>
+        <p class="slide-element slide-text">Add HeyMate to your Slack workspace and channels ⚙️</p>
+      </div>
+      <div class="slide" id="slide-step-2">
+        <img class="slide-element slide-image" src="<%= Routes.static_path(@conn, "/images/rocket.svg")%>" alt="A rocket flying off a laptop"/>
+        <h3 class="slide-element slide-text">Set it up</h3>
+        <p class="slide-element slide-text">Define your desired emoji for reactions 🍩</p>
+      </div>
+      <div class="slide" id="slide-step-3">
+        <img class="slide-element slide-image" src="<%= Routes.static_path(@conn, "/images/flower.svg")%>" alt="A hand holding a vase with a flower"/>
+        <h3 class="slide-element slide-text">Share some love</h3>
+        <p class="slide-element slide-text">Get fun including or reacting with your emoji 🤘🏾</p>
+      </div>
+      <div class="slide" id="slide-step-4">
+        <img class="slide-element slide-image" src="<%= Routes.static_path(@conn, "/images/phone.svg")%>" alt="Appreciation emojis coming out of a smartphone"/>
+        <h3 class="slide-element slide-text">Team building</h3>
+        <p class="slide-element slide-text">Boost your team happiness and build relationships 💜</p>
+      </div>
+    </div>
+  </div>
+  <div class="outro container">
+    <h2>Nurture team happiness and improve relationships by making the remote more fun and closer</h2>
+    <p>Celebrate and appreciate your teammates' successes by discovering hidden combos, jumbo emojis, stats, and many more funny features!</p>
+    <img class="message" src="<%= Routes.static_path(@conn, "/images/tree.svg")%>" alt="Drawing of two people picking presents from a tree"/>
+    <h1>Start giving happiness now</h1>
+    <p>Free forever, no credit card required 👍</p>
+    <a href="https://github.com/codegram/hey-mate" target="_blank" role="button" class="button action-button repo-button"><img class="icon" src="<%= Routes.static_path(@conn, "/images/github-logo.svg")%>", alt="Github logo"/>Check the repo</a>
+  </div>
+</div>
