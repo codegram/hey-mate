@@ -44,6 +44,8 @@ config :hey_mate, HeyMateWeb.Endpoint,
     transport_options: [socket_opts: [:inet6]]
   ],
   url: [host: host, port: String.to_integer(System.get_env("PORT") || "4000")],
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  secret_key_base: secret_key_base,
   server: true
 
 config :hey_mate,
