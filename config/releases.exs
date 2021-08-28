@@ -26,8 +26,7 @@ secret_key_base =
 host =
   System.get_env("HOST") ||
     raise """
-    environment variable SECRET_KEY_BASE is missing.
-    You can generate one by calling: mix phx.gen.secret
+    environment variable HOST is missing.
     """
 
 # ## Using releases (Elixir v1.9+)
@@ -44,8 +43,7 @@ config :hey_mate, HeyMateWeb.Endpoint,
     port: String.to_integer(System.get_env("PORT") || "4000"),
     transport_options: [socket_opts: [:inet6]]
   ],
-  url: [host: host, port: String.to_integer(System.get_env("PORT") || "4000")]
-  secret_key_base: secret_key_base,
+  url: [host: host, port: String.to_integer(System.get_env("PORT") || "4000")],
   server: true
 
 config :hey_mate,

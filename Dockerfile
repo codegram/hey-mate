@@ -9,6 +9,7 @@ ARG secretKeyBase=
 ARG slackBotApiToken=
 ARG slackClientId=
 ARG slackClientSecret=
+ARG host=
 
 ENV PORT=5000
 ENV MIX_ENV=prod
@@ -17,6 +18,7 @@ ENV SECRET_KEY_BASE=$secretKeyBase
 ENV SLACK_BOT_API_TOKEN=$slackBotApiToken
 ENV SLACK_CLIENT_ID=$slackClientId
 ENV SLACK_CLIENT_SECRET=$slackClientSecret
+ENV HOST=$host
 
 # Cache elixir deps
 ADD mix.exs mix.lock /tmp/
