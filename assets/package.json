@@ -16,7 +16,7 @@
     "@nodelib/fs.stat": "^2.0.4",
     "@nodelib/fs.walk": "^1.2.7",
     "babel-loader": "^8.2.2",
-    "copy-webpack-plugin": "^9.0.0",
+    "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^5.2.6",
     "css-minimizer-webpack-plugin": "^3.0.1",
     "mini-css-extract-plugin": "^1.6.0",
