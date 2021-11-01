@@ -11,7 +11,7 @@
     "phoenix_html": "file:../deps/phoenix_html"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.16.0",
     "@babel/preset-env": "^7.15.0",
     "@nodelib/fs.stat": "^2.0.4",
     "@nodelib/fs.walk": "^1.2.7",
